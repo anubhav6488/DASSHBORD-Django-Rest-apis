@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="/static/favicon.png.png" type="image/x-icon">
+<style>
+img {
+  width: 100%;
+}
+</style>
+</head>
+<body>
+    <section>
+      {% for p in productsdata %}
+      <img src="/media/{{p.publish_image}}"/>
+     <img src="/media/{{p.publish_image}}">
+       {% endfor %}
+
+    </body>
+</html>

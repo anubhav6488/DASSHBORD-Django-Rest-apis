@@ -1,0 +1,122 @@
+ {% include "header.html" %} 
+ <!DOCTYPE html>
+
+ <html>
+    <head>
+      <link rel="stylesheet"
+      href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        {% load static %}
+<link rel="stylesheet" href="{% static 'ani.css'%}">
+<link rel="stylesheet" href="{% static 'border.css'%}">
+<link rel="stylesheet" href="{% static 'search.css'%}">
+        <link rel="shortcut icon" href="/static/favicon.png.png" type="image/x-icon">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+    </head>
+    <body style="background-color:black;  color: white;">img {
+      width: 20%;
+    }
+    </style>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>THE WORLD #1 MARKETPLACE<br>TO BUY BEATS<br></h1>
+
+        <div class="row justify-content-center padding">
+          <div class="col-md-8 ftco-animate fadeInUp ftco-animated" style="
+          left: -277;">
+              <form action="#" class="domain-form">
+        <div class="form-group d-md-flex">
+          <input type="text" class="form-control px-4" placeholder="Search......">
+          <div><input type="submit" class="search-domain btn btn-primary px-5" value=""><i class="fa fa-search" style="color:black;margin-bottom: 00px;margin-top: -45;margin-left: ‒45;margin-left: 45px;height: 27px;"> </i></div>
+         
+        </div>
+      </form>
+          </div>
+      </div>
+      
+
+
+
+
+
+
+        
+        <h4>TRENDING:</h4>
+        <nav style="margin-top: -54.900;">
+          <div class ="nav-links" style="
+          margin-right: 100px;
+          margin-left: 130px;
+          ">
+              <ul>
+                {% for t in trenddata %}
+                  <h1><li><a href="">{{t.trend_title1}}</a></li>
+                  <li><a href="">{{t.trend_title2}}</a></li>
+                  <li><a href="">{{t.trend_title3}}</a></li>
+                  <li><a href="">{{t.trend_title4}}</a></li>
+                  <li><a href="">{{t.trend_title5}}</a></li></h1>
+                  {% endfor %}
+              </ul>
+            </section>
+          </div>
+      </nav>
+    </div>
+        <br> <div class="container py-3">
+          <h2>Recommended</h2>
+          
+          <br>
+          <div class="row">
+            {% for p in productsdata %}
+            <div class="col-sm-12 col-md-6 col-lg-3 pb-4" style="">
+              <div class="card h-100" style="box-shadow: 10px 10px 10px 10px grey,14px 14px 0 0 black; background-color:grey; border-radius:45px" >
+                <img src="/media/{{p.publish_image}}" class="card-img-top" max-width="500px" min-width="500px" height="250px" style="border-radius:50px">
+                  <div class="card-body">
+                  <center><h4 class="card-title">{{ p.products_NAME }}</h4></center>
+                  <h7 class="card-title">PRICE={{ p.price }}</h7>
+                    <p class="card-text text-muted" style="font-size:12px">{{ p.product_type }}</p>
+                    <p class="card-text">{{ p.product_description }}</p>
+                  </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div> 
+        <nav aria-label="Page navigation example">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+
+
+
+        
+        What is Lorem Ipsum?
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+Why do we use it?
+It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+        {% for a in igdata  %}
+        <img src="/media/{{a.imge1}}"/>
+        {% endfor %}
+        
+         
+
+        <div>
+        <marquee
+        width: "10px"; onmouseover="stop()" onmouseout="start()">
+            <h1><a style="color:white;"href=""> SPOTIFY</a>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <a  style="color:white;" href="">JIO SAVAN</a> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a style="color:white;"href="">  YOUTUBE</a></hy1>
+           </marquee>
+    </body>
+ </html>
+ {% include "footer.html" %}
