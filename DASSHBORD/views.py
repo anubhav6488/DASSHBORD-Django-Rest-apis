@@ -1,7 +1,7 @@
 from rest_framework import generics,status
 from rest_framework.response import Response
-from dash.models import Data
-from dash.serializers import DataSerializer
+from dashbrd.models import Data
+from dashbrd.serializers import DataSerializer
 from django.http import HttpResponse
 
 

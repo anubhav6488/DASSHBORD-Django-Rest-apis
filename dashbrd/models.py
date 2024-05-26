@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Data(models.Model):
     end_year=models.CharField(max_length=30) 
-    intensit=models.CharField(max_length=30) 
+    intensity=models.FloatField(default='1')
     sector=models.CharField(max_length=30)
     topic=models.CharField(max_length=30) 
     insight=models.CharField(max_length=30)
